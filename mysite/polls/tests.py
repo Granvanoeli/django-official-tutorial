@@ -13,7 +13,7 @@ from django.core.urlresolvers import reverse
 import datetime
 
 
-# Something something Darkside
+# Something something Darkside 2
 
 class PollMethodTests(TestCase):
 
