@@ -1,5 +1,11 @@
+
+
 <!DOCTYPE html>
 <html>
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
 <head>
     <title>Polls</title>
 </head>
@@ -8,7 +14,9 @@
 {% if latest_poll_list %}
     <ul>
     {% for poll in latest_poll_list %}
+        {% if poll.choice_set.all %}
         <li><a href="{% url 'polls:detail' poll.id %}">{{ poll.question }}</a></li>
+        {% endif %}
     {% endfor %}
     </ul>
 {% else %}
