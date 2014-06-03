@@ -12,6 +12,9 @@ from django.core.urlresolvers import reverse
 
 import datetime
 
+
+# Something something Darkside
+
 class PollMethodTests(TestCase):
 
     def test_was_published_recently_with_future_poll(self):
